@@ -1,21 +1,22 @@
-import { actionTypes } from './actionTypes';
-
+import { ActionTypes } from '../constants/actionTypes';
+const {SET_PRODUCTS, SELECTED_PRODUCT, REMOVE_SELECTED_PRODUCT} = ActionTypes;
 const setProducts = (products) => {
     return {
-        type: actionTypes.SET_PRODUCTS,
+        type: SET_PRODUCTS,
         payload: products
     }
 }
 
 const selectProduct = (product) => {
     return {
-        type: actionTypes.SELECTED_PRODUCT,
+        type: SELECTED_PRODUCT,
         payload: product
     }
 }
 const removeSelectedProduct = () => {
     return {
-        type: actionTypes.REMOVE_SELECTED_PRODUCT
+        type: REMOVE_SELECTED_PRODUCT
+        
     }
 }
 
