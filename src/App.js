@@ -1,10 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import Error from './containers/Error';
+import Header from './containers/Header';
+import ProductDetails from './containers/ProductDetails';
+import ProductListing from './containers/ProductListing';
 
 function App() {
   return (
     <div className="App">
-      <p>chaudhuree</p>
+
+      <Router>
+        <Routes>
+        <Header />
+          <Route path="/" element={<ProductListing />} />
+          <Route path="/product/:id" element={<ProductDetails />} />  
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+      
       
     </div>
   );
